@@ -1,3 +1,4 @@
+<%@taglib prefix = "c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%-- 
     Document   : produtos_lista
     Created on : 14/08/2015, 18:55:51
@@ -15,23 +16,19 @@
     </head>
     <body>
         <h1> Lista de Produtos </h1>
-        <%
-        List<Produto> produtos;
-        produtos = (List<Produto>) request.getAttribute("produtos");
         
-        for(Produto produto : produtos)
-        {
-            %>
+        <c:forEach var="produto"
+                   items="${produtos}">
             <div>
-                <p> <%=produto.getNome()%> </p>
-                <a href = "produto-detalhe?id = <%=produto.getId()%>">
-                <img src="Imagens/<%=produto.getId()%>.jpg" 
-                     alt ="Produto <%=produto.getId()%>" />
+                <p> ${produto.nome} </p>
+                <a href = "produto-detalhe?id =${produto.id}">
+                <img src="../Imagens/${produto.nome}.jpg" 
+                     alt ="/WEB-INF/jsp/detalhe.jsp" />
                 </a>
-                <p>R$ <%=produto.getPreco()%> </p>
+                <p>R$ ${produto.preco} </p>
             </div>
-            
-                    <% }%>
+        </c:forEach>    
+       
       
     </body>
 </html>

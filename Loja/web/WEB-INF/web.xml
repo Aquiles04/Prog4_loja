@@ -4,9 +4,25 @@
         <servlet-name>ProdutoListaServlet</servlet-name>
         <servlet-class>br.pucpr.prog4.Loja.controllers.ProdutoListaServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ProdutoDetalhe</servlet-name>
+        <servlet-class>br.pucpr.prog4.Loja.controllers.ProdutoDetalhe</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ProdutoDetalheServlet</servlet-name>
+        <servlet-class>br.pucpr.prog4.Loja.controllers.ProdutoDetalheServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ProdutoListaServlet</servlet-name>
-        <url-pattern>/produto/lista</url-pattern>
+        <url-pattern>/produto/lista</url-pattern>\
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ProdutoDetalhe</servlet-name>
+        <url-pattern>/ProdutoDetalhe</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ProdutoDetalheServlet</servlet-name>
+        <url-pattern>/produto/detalhe</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
