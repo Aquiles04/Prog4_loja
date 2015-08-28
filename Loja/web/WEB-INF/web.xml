@@ -17,12 +17,12 @@
         <url-pattern>/produto/lista</url-pattern>\
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>ProdutoDetalhe</servlet-name>
-        <url-pattern>/ProdutoDetalhe</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
         <servlet-name>ProdutoDetalheServlet</servlet-name>
         <url-pattern>/produto/detalhe</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ClienteServlet</servlet-name>
+        <url-pattern>/Cliente/cadastro</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
