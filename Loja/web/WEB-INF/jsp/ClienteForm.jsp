@@ -14,9 +14,10 @@
     <body>
         <h1>Meu Cadastro</h1>
         <form action="cadastro" method="POST">
-            //ADICIONAR COM JQUERY OBRIGATORIEDADE E MASCARA PARA CPF
+            <!--ADICIONAR COM JQUERY OBRIGATORIEDADE E MASCARA PARA CPF-->
             <label for="PF">Pessoa Fisica:</label>
             <input type="radio" name="Pessoa" id="PF" value="PF">
+            
             <label for="PJ">Nome:</label>
             <input type="radio" name="Pessoa" id="PJ" value="PJ">Pessoa Juridica
             

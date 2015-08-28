@@ -51,9 +51,9 @@ public class ClienteServlet extends HttpServlet {
         
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         try{
-            String dataAux = request.getParameter("Data");
+            String dataAux = request.getParameter("DataNascimento");
             Date data;
-            data = sdf.parse(request.getParameter("data"));
+            data = sdf.parse(request.getParameter("DataNascimento"));
 
         }
         catch(ParseException ex){
