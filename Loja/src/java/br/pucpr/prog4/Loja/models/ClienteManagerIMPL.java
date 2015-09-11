@@ -5,6 +5,9 @@
  */
 package br.pucpr.prog4.Loja.models;
 
+import br.pucpr.prog4.Loja.dao.IDaoManager;
+import br.pucpr.prog4.Loja.dao.JdbcDaoManager;
+
 
 
 public class ClienteManagerIMPL implements ClienteManager {
@@ -14,7 +17,22 @@ public class ClienteManagerIMPL implements ClienteManager {
 
     @Override
     public Cliente cadastrar() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
+        IDaoManager manager;
+        manager = new JdbcDaoManager();
+        //validar campos
+        try{
+            manager.iniciar();
+            ClienteDAO dao = manager.getClienteDAO();
+            Cliente c;
+            c = dao.Inserir(cliente);
+            manager.confirmarTransação();
+            manager.encerrar();
+            return c;
+        } catch (Exception ex){
+            manager.abortarTransação();
+            throw ex;
+        
+        }
     }
-    
 }
